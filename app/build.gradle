@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
 
 android {
     compileSdkVersion 25
@@ -19,13 +20,24 @@ android {
     }
 }
 
+greendao {
+    schemaVersion 1 //指定数据库schema版本号，迁移等操作会用到
+    daoPackage 'com.hrht.cjp.greendao.db'//通过gradle插件生成的数据库相关文件的包名，默认为你的entity所在的包名
+    targetGenDir 'src/main/java'//自定义生成数据库文件的目录，可以将生成的文件放到我们的java目录中，而不是build中，这样就不用额外的设置资源目录了
+}
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.+'
+    compile files('libs/AMap3DMap_5.3.0_AMapNavi_5.3.0_20170815.jar')
+    compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
-    compile files('libs/AMap3DMap_5.3.0_AMapNavi_5.3.0_20170815.jar')
+    compile 'org.greenrobot:greendao:3.2.2'
+    compile 'org.greenrobot:greendao-generator:3.2.2'
+
+
+    compile project(':okhttputils')
 }

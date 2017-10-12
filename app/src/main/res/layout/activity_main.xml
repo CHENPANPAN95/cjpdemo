@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,23 +12,25 @@
 
     <fragment
         android:id="@+id/fragment_left"
+        android:name="com.hrht.cjp.MapFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:name="com.hrht.cjp.MapFragment"
         android:layout_weight="830"></fragment>
 
     <LinearLayout
         android:id="@+id/layout_right"
-        android:layout_marginLeft="5dp"
         android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
         android:layout_weight="337">
 
         <fragment
-            android:name="com.hrht.cjp.Home_Fragment"
             android:id="@+id/fragment_right"
+            android:name="com.hrht.cjp.Home_Fragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"></fragment>
     </LinearLayout>
 
 </LinearLayout>
+
+
