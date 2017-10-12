@@ -37,7 +37,9 @@
             android:value="badcd4ffefbed0e00f3cf2ba8026c60d">
         </meta-data>
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

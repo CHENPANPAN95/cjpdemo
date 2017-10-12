@@ -1,16 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@mipmap/beijing"
+    android:orientation="horizontal"
+    android:padding="10dp"
     tools:context="com.hrht.cjp.MainActivity">
 
-    <com.amap.api.maps.MapView
-        android:id="@+id/map"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </com.amap.api.maps.MapView>
 
-</RelativeLayout>
+    <fragment
+        android:id="@+id/fragment_left"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:name="com.hrht.cjp.MapFragment"
+        android:layout_weight="830"></fragment>
+
+    <LinearLayout
+        android:id="@+id/layout_right"
+        android:layout_marginLeft="5dp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="337">
+
+        <fragment
+            android:name="com.hrht.cjp.Home_Fragment"
+            android:id="@+id/fragment_right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></fragment>
+    </LinearLayout>
+
+</LinearLayout>
