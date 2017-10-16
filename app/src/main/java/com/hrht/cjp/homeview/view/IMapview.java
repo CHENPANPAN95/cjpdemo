@@ -5,4 +5,5 @@ package com.hrht.cjp.homeview.view;
  */
 
 public interface IMapview {
+
 }

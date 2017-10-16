@@ -34,9 +34,9 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="com.amap.api.v2.apikey"
-            android:value="badcd4ffefbed0e00f3cf2ba8026c60d"></meta-data>
+            android:value="71b6430dddb8dafc1bcefde5d1b2f603"></meta-data>
 
-        <activity android:name=".MainActivity"
+        <activity android:name=".homeview.view.MainActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             >
             <intent-filter>
