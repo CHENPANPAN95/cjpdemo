@@ -277,7 +277,7 @@ public class MapFragment extends Fragment {
     public void onDestroy() {
         super.onDestroy();
         mapView.onDestroy();
-
+        
     }
 
 
